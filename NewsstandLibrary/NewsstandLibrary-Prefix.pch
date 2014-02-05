@@ -1,0 +1,39 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <ZulaLibrary/ZulaLibrary.h>
+    #import <MobileCoreServices/MobileCoreServices.h>
+    #import <ZulaLibrary/ZulaLibrary.h>
+#endif
+
+// notifications
+#define kNotificationIssueDownloadDidFinish @"kNotificationIssueDownloadDidFinish"
+#define kNotificationIssueDownloadDidStart @"kNotificationIssueDownloadDidStart"
+
+#define UIViewAutoresizingFlexibleAll                       \
+UIViewAutoresizingFlexibleBottomMargin    | \
+UIViewAutoresizingFlexibleHeight          | \
+UIViewAutoresizingFlexibleLeftMargin      | \
+UIViewAutoresizingFlexibleRightMargin     | \
+UIViewAutoresizingFlexibleTopMargin       | \
+UIViewAutoresizingFlexibleWidth
+
+#define UIViewAutoresizingFlexibleMargins                   \
+UIViewAutoresizingFlexibleBottomMargin    | \
+UIViewAutoresizingFlexibleLeftMargin      | \
+UIViewAutoresizingFlexibleRightMargin     | \
+UIViewAutoresizingFlexibleTopMargin
+
+// iPad/iPhone detector
+#define isPad() \
+([[UIDevice currentDevice] respondsToSelector:@selector(userInterfaceIdiom)] && \
+[[UIDevice currentDevice] userInterfaceIdiom]==UIUserInterfaceIdiomPad)
+
+//
+#define HARDCORX 1
+#define DEBUGX 1
