@@ -11,6 +11,7 @@
 @interface SMLogoDecorationView : UICollectionReusableView
 
 @property (nonatomic, strong) UIImageView *logo;
+@property (nonatomic, strong) UILabel *text;
 
 + (NSString *)kind;
 

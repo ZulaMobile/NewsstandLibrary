@@ -47,7 +47,7 @@
         self.footerReferenceSize = (CGSize){0, 0};
         
         [self registerClass:[SMShelfDecoratorView class] forDecorationViewOfKind:[SMShelfDecoratorView kind]];
-        //[self registerClass:[SMLogoDecorationView class] forDecorationViewOfKind:[SMLogoDecorationView kind]];
+        [self registerClass:[SMLogoDecorationView class] forDecorationViewOfKind:[SMLogoDecorationView kind]];
     }
     return self;
 }
@@ -97,11 +97,13 @@
         }
         
         // calculate logo rect
-        /*
         CGSize logoSize = [SMLogoDecorationView logoSize];
-        float logoPaddingTop = (isPad()) ? 120.0f : 70.0f;
-        self.logoRect = [NSValue valueWithCGRect:CGRectMake(0.0f, -logoSize.height - logoPaddingTop, self.collectionViewContentSize.width, logoSize.height)];
-         */
+        //float logoPaddingTop = (isPad()) ? 120.0f : 70.0f;
+        self.logoRect = [NSValue valueWithCGRect:CGRectMake(-6.0f,
+                                                            self.collectionViewContentSize.height - logoSize.height - 6.0f,
+                                                            self.collectionViewContentSize.width,
+                                                            logoSize.height)];
+        
     }
     else
     {
@@ -175,9 +177,6 @@
         }
     }];
     
-    return newArray;
-    
-    /*
     // Add a logo view
     UICollectionViewLayoutAttributes *logoAttrs =
     [UICollectionViewLayoutAttributes layoutAttributesForDecorationViewOfKind:[SMLogoDecorationView kind]
@@ -188,7 +187,6 @@
     // return are modifier array
     array = [NSArray arrayWithArray:newArray];
     return array;
-     */
 }
 
 // Layout attributes for a specific cell

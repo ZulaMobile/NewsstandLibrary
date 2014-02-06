@@ -21,13 +21,21 @@
     self = [super initWithFrame:frame];
     if (self) {
         CGSize logoSize = [SMLogoDecorationView logoSize];
-        self.logo = [[UIImageView alloc] initWithFrame:CGRectMake(CGRectGetWidth(frame) / 2 - logoSize.width / 2,
-                                                                  0.0f, logoSize.width, logoSize.height)];
+        self.logo = [[UIImageView alloc] initWithFrame:CGRectMake(CGRectGetWidth(frame) - 68.0f,
+                                                                  0.0f, 68.0f, logoSize.height)];
         self.logo.backgroundColor = [UIColor clearColor];
-        self.logo.image = [UIImage imageNamed:@"zularesources.bundle/icon_alternate-50"];
+        self.logo.image = [UIImage imageNamed:@"zularesources.bundle/signature"];
         self.logo.alpha = 0.5f;
         
+        self.text = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetWidth(frame) - CGRectGetWidth(self.logo.frame) - 46.0f,
+                                                             2.0f, 46.0f, logoSize.height)];
+        self.text.backgroundColor = [UIColor clearColor];
+        self.text.font = [UIFont systemFontOfSize:8.0f];
+        self.text.textColor = [UIColor grayColor];
+        self.text.text = @"Powered by";
+        
         [self addSubview:self.logo];
+        [self addSubview:self.text];
         
         // register notifications for display/hide the logo
         [[NSNotificationCenter defaultCenter] addObserver:self
@@ -54,7 +62,7 @@
 
 + (CGSize)logoSize
 {
-    return (CGSize){25.0f, 25.0f};
+    return (CGSize){108.0f, 12.0f};
 }
 
 #pragma mark - private methods
