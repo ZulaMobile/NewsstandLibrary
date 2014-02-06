@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
+		670C629418A3D4BA00CCFA72 /* NewsstandReleaseBin */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 670C629518A3D4BA00CCFA72 /* Build configuration list for PBXAggregateTarget "NewsstandReleaseBin" */;
+			buildPhases = (
+				670C629818A3D4CF00CCFA72 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = NewsstandReleaseBin;
+			productName = NewsstandReleaseBin;
+		};
 		67D67AF018A291D2007F9FAE /* NewsstandUniversalBin */ = {
 			isa = PBXAggregateTarget;
 			buildConfigurationList = 67D67AF118A291D2007F9FAE /* Build configuration list for PBXAggregateTarget "NewsstandUniversalBin" */;
@@ -21,6 +32,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		670C629018A3D26000CCFA72 /* SMBookStoreViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 676E124F18A3A7D70033D715 /* SMBookStoreViewController.h */; };
+		670C629118A3D26600CCFA72 /* SMBookStore.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 676E125218A3A7D70033D715 /* SMBookStore.h */; };
 		676E126918A3A7D70033D715 /* SMBookStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 676E125018A3A7D70033D715 /* SMBookStoreViewController.m */; };
 		676E126A18A3A7D70033D715 /* SMBookStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 676E125318A3A7D70033D715 /* SMBookStore.m */; };
 		676E126B18A3A7D70033D715 /* SMBookStoreContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 676E125518A3A7D70033D715 /* SMBookStoreContainer.m */; };
@@ -50,6 +63,8 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				670C629118A3D26600CCFA72 /* SMBookStore.h in CopyFiles */,
+				670C629018A3D26000CCFA72 /* SMBookStoreViewController.h in CopyFiles */,
 				67D67A9A18A28C9D007F9FAE /* NewsstandLibrary.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,11 +297,25 @@
 			targets = (
 				67D67A9018A28C9D007F9FAE /* NewsstandLibrary */,
 				67D67AF018A291D2007F9FAE /* NewsstandUniversalBin */,
+				670C629418A3D4BA00CCFA72 /* NewsstandReleaseBin */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		670C629818A3D4CF00CCFA72 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# define output folder environment variable\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-release\n\n# Step 1. Build Device and Simulator versions\nxcodebuild -target NewsstandLibrary ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\n\n# make sure the output directory exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\n\n# Step 2. Create universal binary file using lipo\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/lib${PROJECT_NAME}.a\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/lib${PROJECT_NAME}.a\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/lib${PROJECT_NAME}.a\"\n\n# Last touch. copy the header files. Just for convenience\n#cp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/include\" \"${UNIVERSAL_OUTPUTFOLDER}/\"";
+		};
 		67D67AF418A29226007F9FAE /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -355,6 +384,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		670C629618A3D4BA00CCFA72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		670C629718A3D4BA00CCFA72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		67D67AB218A28C9D007F9FAE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -388,8 +432,9 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Debug;
 		};
@@ -420,6 +465,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -436,9 +482,11 @@
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/AppCreator-badaignldtgtduflejhstnbkktqh/Build/Products/Debug-iphoneos",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/** $(inherited)";
 			};
 			name = Debug;
 		};
@@ -451,17 +499,20 @@
 				GCC_PREFIX_HEADER = "NewsstandLibrary/NewsstandLibrary-Prefix.pch";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/AppCreator-badaignldtgtduflejhstnbkktqh/Build/Products/Debug-iphoneos",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/AppCreator-badaignldtgtduflejhstnbkktqh/Build/Products/Release-iphoneos",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/** $(inherited)";
 			};
 			name = Release;
 		};
 		67D67AF218A291D2007F9FAE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -476,6 +527,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		670C629518A3D4BA00CCFA72 /* Build configuration list for PBXAggregateTarget "NewsstandReleaseBin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				670C629618A3D4BA00CCFA72 /* Debug */,
+				670C629718A3D4BA00CCFA72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		67D67A8C18A28C9D007F9FAE /* Build configuration list for PBXProject "NewsstandLibrary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
