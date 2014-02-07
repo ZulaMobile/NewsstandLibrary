@@ -35,6 +35,7 @@ static NSString *BookStoreCellIdentifier = @"BookStoreCellIdentifier";
     UICollectionViewFlowLayout *layout;
     RoboViewController *pdfCtrl;
     BOOL isEditModeActive;
+    dispatch_queue_t queue;
 }
 @synthesize bookStore, collectionView;
 
@@ -43,6 +44,7 @@ static NSString *BookStoreCellIdentifier = @"BookStoreCellIdentifier";
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        queue = dispatch_queue_create("Book Store Queue", NULL);
     }
     return self;
 }
@@ -118,22 +120,31 @@ static NSString *BookStoreCellIdentifier = @"BookStoreCellIdentifier";
     [super fetchContents];
     
     if (![self.componentDesciption hasDownloadableContents]) {
-        // the contents are ready
-        self.bookStore = [[SMBookStoreContainer sharedObject] bookStoreForKey:self.componentDesciption.title];
-        if (!self.bookStore) {
-            self.bookStore = [[SMBookStore alloc] initWithAttributes:self.componentDesciption.contents];
-            [[SMBookStoreContainer sharedObject] addBookStore:self.bookStore forKey:self.componentDesciption.title];
-        }
-        
-        // mark the first book as the newsletter cover
-        if ([self.bookStore.issues count] > 0) {
-            SMIssue *issue = [self.bookStore.issues objectAtIndex:0];
-            if (issue) {
-                [issue setNewsstandIconFromCoverImage];
+        __block id weakSelf = self;
+        dispatch_async(queue, ^{
+            SMBookStoreViewController *strongSelf = weakSelf;
+            
+            // the contents are ready
+            strongSelf.bookStore = [[SMBookStoreContainer sharedObject] bookStoreForKey:strongSelf.componentDesciption.title];
+            if (!strongSelf.bookStore) {
+                strongSelf.bookStore = [[SMBookStore alloc] initWithAttributes:strongSelf.componentDesciption.contents];
+                [[SMBookStoreContainer sharedObject] addBookStore:strongSelf.bookStore forKey:strongSelf.componentDesciption.title];
+                
+                // refresh contents
+                [self.collectionView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
             }
-        }
+            
+            // mark the first book as the newsletter cover
+            if ([strongSelf.bookStore.issues count] > 0) {
+                SMIssue *issue = [strongSelf.bookStore.issues objectAtIndex:0];
+                if (issue) {
+                    [issue setNewsstandIconFromCoverImage];
+                }
+            }
+            
+            [strongSelf performSelectorOnMainThread:@selector(applyContents) withObject:Nil waitUntilDone:YES];
+        });
         
-        [self applyContents];
         return;
     }
     
@@ -190,6 +201,7 @@ static NSString *BookStoreCellIdentifier = @"BookStoreCellIdentifier";
         //
     }];
      */
+    
     [super applyContents];
 }
 
