@@ -15,6 +15,7 @@
 #import "SMBookShelfCell.h"
 #import "SMBookShelfLayout.h"
 #import "SMBookStoreContainer.h"
+#import "SMReaderAdvertisementModule.h"
 
 
 static NSString *BookStoreCellIdentifier = @"BookStoreCellIdentifier";
@@ -22,12 +23,15 @@ static NSString *BookStoreCellIdentifier = @"BookStoreCellIdentifier";
 @interface SMBookStoreViewController () <UICollectionViewDataSource, UICollectionViewDelegate, RoboViewControllerDelegate, UIGestureRecognizerDelegate, SMBookShelfLayoutDelegate, UIAlertViewDelegate>
 
 @property (nonatomic, strong) UIToolbar *toolBar;
+@property (nonatomic, strong) SMReaderAdvertisementModule *readerAdModule;
 
 - (void)startEditMode;
 - (void)endEditMode;
 - (void)removeItems;
 - (void)askToRemoveItems;
 - (void)deviceOrientationDidChange:(NSNotification *)notification;
+- (void)displayReaderAdvertNotification:(NSNotification *)notification;
+
 @end
 
 @implementation SMBookStoreViewController
@@ -36,6 +40,7 @@ static NSString *BookStoreCellIdentifier = @"BookStoreCellIdentifier";
     RoboViewController *pdfCtrl;
     BOOL isEditModeActive;
     dispatch_queue_t queue;
+    int pageForLastAdvert;
 }
 @synthesize bookStore, collectionView;
 
@@ -45,6 +50,8 @@ static NSString *BookStoreCellIdentifier = @"BookStoreCellIdentifier";
     if (self) {
         // Custom initialization
         queue = dispatch_queue_create("Book Store Queue", NULL);
+        self.readerAdModule = [[SMReaderAdvertisementModule alloc] initWithComponent:self];
+        pageForLastAdvert = 0;
     }
     return self;
 }
@@ -57,6 +64,9 @@ static NSString *BookStoreCellIdentifier = @"BookStoreCellIdentifier";
 - (void)loadView
 {
     [super loadView];
+    
+    // add custom reader advertisement
+    
     
     // our custom shelf layout
     layout = [[SMBookShelfLayout alloc] init];
@@ -227,8 +237,6 @@ static NSString *BookStoreCellIdentifier = @"BookStoreCellIdentifier";
     cell.label.text = issue.title;
     [cell.coverImage setImageWithURL:issue.coverUrl];
     
-    NSLog(@"issue: %@ state: %ld", issue.identifier, issue.state);
-    
     [cell changeState:issue.state];
     
     return cell;
@@ -267,6 +275,12 @@ static NSString *BookStoreCellIdentifier = @"BookStoreCellIdentifier";
             RoboDocument *document = [[RoboDocument alloc] initWithFilePath:[issue localFilePath] password:nil];
             pdfCtrl = [[RoboViewController alloc] initWithRoboDocument:document];
             pdfCtrl.delegate = self;
+            pdfCtrl.title = issue.title;
+            
+            [[NSNotificationCenter defaultCenter] addObserver:self
+                                                     selector:@selector(displayReaderAdvertNotification:)
+                                                         name:kRoboDidDisplayPageNotification
+                                                       object:Nil];
             
             [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
             
@@ -386,6 +400,23 @@ static NSString *BookStoreCellIdentifier = @"BookStoreCellIdentifier";
     SMBookShelfLayout *theLayout = (SMBookShelfLayout *)self.collectionView.collectionViewLayout;
     [theLayout invalidateLayout];
     [self.collectionView reloadData];
+}
+
+- (void)displayReaderAdvertNotification:(NSNotification *)notification
+{
+    // get the page number
+    NSNumber *page = [notification.userInfo objectForKey:@"page"];
+    
+    // if the advert is showed recently, don't show it again.
+    // because, when the model advert is dismissed, this notification kicks in again.
+    if ([page intValue] == pageForLastAdvert) return;
+    
+    pageForLastAdvert = [page intValue];
+    
+    RoboViewController *ctrl = (RoboViewController *)notification.object;
+    NSString *keyword = [NSString stringWithFormat:@"%@.%@", ctrl.title, page];
+    
+    [self.readerAdModule displayInterstitialAdvertForKeyword:keyword];
 }
 
 #pragma mark - alert view delegate

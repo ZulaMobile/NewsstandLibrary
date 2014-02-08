@@ -34,6 +34,7 @@
 /* Begin PBXBuildFile section */
 		670C629018A3D26000CCFA72 /* SMBookStoreViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 676E124F18A3A7D70033D715 /* SMBookStoreViewController.h */; };
 		670C629118A3D26600CCFA72 /* SMBookStore.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 676E125218A3A7D70033D715 /* SMBookStore.h */; };
+		672F33EA18A6547100D67A4C /* SMReaderAdvertisementModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 672F33E918A6547100D67A4C /* SMReaderAdvertisementModule.m */; };
 		676E126918A3A7D70033D715 /* SMBookStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 676E125018A3A7D70033D715 /* SMBookStoreViewController.m */; };
 		676E126A18A3A7D70033D715 /* SMBookStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 676E125318A3A7D70033D715 /* SMBookStore.m */; };
 		676E126B18A3A7D70033D715 /* SMBookStoreContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 676E125518A3A7D70033D715 /* SMBookStoreContainer.m */; };
@@ -75,6 +76,8 @@
 /* Begin PBXFileReference section */
 		5971B0F02D3C40968B66E870 /* libPods-NewsstandLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NewsstandLibrary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B4B329188BB493385AF5639 /* Pods-NewsstandLibrary.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsstandLibrary.xcconfig"; path = "../Pods/Pods-NewsstandLibrary.xcconfig"; sourceTree = "<group>"; };
+		672F33E818A6547100D67A4C /* SMReaderAdvertisementModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMReaderAdvertisementModule.h; sourceTree = "<group>"; };
+		672F33E918A6547100D67A4C /* SMReaderAdvertisementModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMReaderAdvertisementModule.m; sourceTree = "<group>"; };
 		676E124F18A3A7D70033D715 /* SMBookStoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMBookStoreViewController.h; sourceTree = "<group>"; };
 		676E125018A3A7D70033D715 /* SMBookStoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMBookStoreViewController.m; sourceTree = "<group>"; };
 		676E125218A3A7D70033D715 /* SMBookStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMBookStore.h; sourceTree = "<group>"; };
@@ -161,6 +164,8 @@
 		676E124E18A3A7D70033D715 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				672F33E818A6547100D67A4C /* SMReaderAdvertisementModule.h */,
+				672F33E918A6547100D67A4C /* SMReaderAdvertisementModule.m */,
 				676E124F18A3A7D70033D715 /* SMBookStoreViewController.h */,
 				676E125018A3A7D70033D715 /* SMBookStoreViewController.m */,
 			);
@@ -383,6 +388,7 @@
 				67AC7A5418A63CE9005BE9EE /* SMDownloadProgressView.m in Sources */,
 				676E126918A3A7D70033D715 /* SMBookStoreViewController.m in Sources */,
 				676E126F18A3A7D70033D715 /* SMBookShelfLayout.m in Sources */,
+				672F33EA18A6547100D67A4C /* SMReaderAdvertisementModule.m in Sources */,
 				676E127218A3A7D70033D715 /* SMShelfDecoratorView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
