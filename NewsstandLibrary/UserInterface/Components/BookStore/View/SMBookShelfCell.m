@@ -7,10 +7,11 @@
 //
 
 #import "SMBookShelfCell.h"
-#import "GSProgressView.h"
+#import "SMDownloadProgressView.h"
 #import "SMPausedView.h"
 #import <QuartzCore/QuartzCore.h>
 #import "SMShelfLayoutAttributes.h"
+
 
 #define MARGIN 2
 
@@ -65,8 +66,8 @@
         [self.mask setBackgroundColor:[UIColor colorWithWhite:1.0f alpha:0.7]];
         
         // preloader
-        CGSize progressViewSize = (CGSize){ 20.0f, 20.0f };
-        self.progressView = [[GSProgressView alloc] initWithFrame:CGRectMake(CGRectGetWidth(self.frame) / 2 - progressViewSize.width / 2,
+        CGSize progressViewSize = (CGSize){ 40.0f, 40.0f };
+        self.progressView = [[SMDownloadProgressView alloc] initWithFrame:CGRectMake(CGRectGetWidth(self.frame) / 2 - progressViewSize.width / 2,
                                                                                      CGRectGetHeight(self.frame) / 2 - progressViewSize.height / 2,
                                                                                      progressViewSize.width, progressViewSize.height)];
         [self.progressView setColor:preloaderColor];

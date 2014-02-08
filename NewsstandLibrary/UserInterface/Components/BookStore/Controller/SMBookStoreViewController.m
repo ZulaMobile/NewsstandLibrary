@@ -227,6 +227,8 @@ static NSString *BookStoreCellIdentifier = @"BookStoreCellIdentifier";
     cell.label.text = issue.title;
     [cell.coverImage setImageWithURL:issue.coverUrl];
     
+    NSLog(@"issue: %@ state: %ld", issue.identifier, issue.state);
+    
     [cell changeState:issue.state];
     
     return cell;

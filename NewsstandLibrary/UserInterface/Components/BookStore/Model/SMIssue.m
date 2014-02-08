@@ -137,6 +137,8 @@
         self.downloadingManager = [[SMIssuePersistanceManager alloc] initWithIssue:self databaseName:kDownloadingIssuesList];
         self.pausedManager = [[SMIssuePersistanceManager alloc] initWithIssue:self databaseName:kPausedIssuesList];
         
+        self.downloadPercentage = 0.0f;
+        
         [self resetState];
     }
     return self;
@@ -151,9 +153,10 @@
 
 - (void)resetState
 {
-    BOOL available = [self isAvailableToRead];
-    if (available) {
+    if ([self isAvailableToRead]) {
         self.state = SMIssueAvailable;
+    } else if (self.downloadPercentage > 0.0f) {
+        self.state = SMIssueIsDownloading;
     } else {
         self.state = SMIssueDefault;
     }
@@ -319,6 +322,8 @@
             self.downloadCompletionBlock(NO);
         }
     } progress:^(float percentage) {
+        
+        self.downloadPercentage = percentage;
         
         // progress
         if (self.downloadProgressBlock) {

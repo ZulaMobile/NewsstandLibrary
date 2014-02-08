@@ -59,6 +59,13 @@ typedef void (^IssueDownloadProgressBlock) (float percentage);
  */
 @property (nonatomic) SMIssueState state;
 
+/**
+ *  The percentage of the download. If not 0.0f, it indicated that the state of the
+ *  issue is in `downloading` and the value of download is determined by this property.
+ *  it is between 0.0f and 0.1f.
+ */
+@property (nonatomic) float downloadPercentage;
+
 @property (nonatomic, copy) IssueDownloadCompletionBlock downloadCompletionBlock;
 @property (nonatomic, copy) IssueDownloadProgressBlock downloadProgressBlock;
 
