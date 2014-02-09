@@ -27,6 +27,7 @@ static NSString *BookStoreCellIdentifier = @"BookStoreCellIdentifier";
 
 - (void)startEditMode;
 - (void)endEditMode;
+- (void)addToolBarButton;
 - (void)removeItems;
 - (void)askToRemoveItems;
 - (void)deviceOrientationDidChange:(NSNotification *)notification;
@@ -110,7 +111,8 @@ static NSString *BookStoreCellIdentifier = @"BookStoreCellIdentifier";
     [self.view addSubview:self.toolBar];
     
     // enter view mode
-    [self endEditMode];
+    //[self endEditMode];
+    [self addToolBarButton];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -334,6 +336,19 @@ static NSString *BookStoreCellIdentifier = @"BookStoreCellIdentifier";
 
 #pragma mark - private methods
 
+- (void)addToolBarButton
+{
+    if (isEditModeActive) {
+        self.navigationItem.rightBarButtonItems = @[[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                                                                                  target:self
+                                                                                                  action:@selector(endEditMode)]];
+    } else {
+        self.navigationItem.rightBarButtonItems = @[[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
+                                                                                                  target:self
+                                                                                                  action:@selector(startEditMode)]];
+    }
+}
+
 // edit mode is started by edit button on navigation bar
 - (void)startEditMode
 {
@@ -343,10 +358,7 @@ static NSString *BookStoreCellIdentifier = @"BookStoreCellIdentifier";
     [self.collectionView reloadData];
     
     // buttons
-    UIBarButtonItem *endEditModeItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
-                                                                                     target:self
-                                                                                     action:@selector(endEditMode)];
-    self.navigationItem.rightBarButtonItems = @[endEditModeItem];
+    [self addToolBarButton];
     
     // display a toolbar with remove button
     self.toolBar.hidden = NO;
@@ -365,9 +377,7 @@ static NSString *BookStoreCellIdentifier = @"BookStoreCellIdentifier";
     [self.collectionView reloadData];
     
     // buttons
-    self.navigationItem.rightBarButtonItems = @[[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
-                                                                                          target:self
-                                                                                          action:@selector(startEditMode)]];
+    [self addToolBarButton];
     
     self.toolBar.hidden = YES;
     

@@ -250,6 +250,7 @@
     [self.pausedManager markIssue];
     [self.downloadSession pause];
     self.state = SMIssuePaused;
+    self.downloadPercentage = 0.0f;
 }
 
 - (BOOL)isPaused
