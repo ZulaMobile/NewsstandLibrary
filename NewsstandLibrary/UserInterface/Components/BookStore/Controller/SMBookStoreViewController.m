@@ -16,6 +16,7 @@
 #import "SMBookShelfLayout.h"
 #import "SMBookStoreContainer.h"
 #import "SMReaderAdvertisementModule.h"
+#import "SMProgressHUDModule.h"
 
 
 static NSString *BookStoreCellIdentifier = @"BookStoreCellIdentifier";
@@ -66,8 +67,8 @@ static NSString *BookStoreCellIdentifier = @"BookStoreCellIdentifier";
 {
     [super loadView];
     
-    // add custom reader advertisement
-    
+    // remove preloader module
+    [self removeModuleByClass:[SMProgressHUDModule class]];
     
     // our custom shelf layout
     layout = [[SMBookShelfLayout alloc] init];
