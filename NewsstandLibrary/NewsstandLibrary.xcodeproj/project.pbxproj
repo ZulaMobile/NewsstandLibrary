@@ -34,6 +34,8 @@
 		67909D3518C76FA7005975DB /* SMShelfLayoutAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 67909D2618C76FA7005975DB /* SMShelfLayoutAttributes.m */; };
 		67909D3618C76FA7005975DB /* SMTableLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 67909D2818C76FA7005975DB /* SMTableLayout.m */; };
 		67909D3818C76FC8005975DB /* app.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67909D3718C76FC8005975DB /* app.plist */; };
+		67909D3A18C773B8005975DB /* NewsletterDefault.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 67909D3918C773B8005975DB /* NewsletterDefault.bundle */; };
+		67909D3C18C773C2005975DB /* zularesources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 67909D3B18C773C2005975DB /* zularesources.bundle */; };
 		D2878D5102DB45578001E819 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC754C15FD54DB6A17C7110 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +96,8 @@
 		67909D2718C76FA7005975DB /* SMTableLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTableLayout.h; sourceTree = "<group>"; };
 		67909D2818C76FA7005975DB /* SMTableLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTableLayout.m; sourceTree = "<group>"; };
 		67909D3718C76FC8005975DB /* app.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = app.plist; sourceTree = "<group>"; };
+		67909D3918C773B8005975DB /* NewsletterDefault.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = NewsletterDefault.bundle; path = ../../assets/NewsletterDefault.bundle; sourceTree = "<group>"; };
+		67909D3B18C773C2005975DB /* zularesources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = zularesources.bundle; path = ../../../ZulaLibrary/assets/zularesources.bundle; sourceTree = "<group>"; };
 		8D0A4A38FAA94226AEFECB3E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		9AC754C15FD54DB6A17C7110 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -175,6 +179,8 @@
 				67909CE218C76AC2005975DB /* main.m */,
 				67909CE418C76AC2005975DB /* NewsstandLibrary-Prefix.pch */,
 				67909D3718C76FC8005975DB /* app.plist */,
+				67909D3B18C773C2005975DB /* zularesources.bundle */,
+				67909D3918C773B8005975DB /* NewsletterDefault.bundle */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -361,7 +367,9 @@
 			files = (
 				67909CE118C76AC2005975DB /* InfoPlist.strings in Resources */,
 				67909D3818C76FC8005975DB /* app.plist in Resources */,
+				67909D3A18C773B8005975DB /* NewsletterDefault.bundle in Resources */,
 				67909CE918C76AC2005975DB /* Images.xcassets in Resources */,
+				67909D3C18C773C2005975DB /* zularesources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

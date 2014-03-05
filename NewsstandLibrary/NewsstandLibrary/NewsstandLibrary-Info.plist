@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>default_api_url</key>
-	<string>http://localhost:8000</string>
+	<string>http://www.nobleandroyal.com:8000</string>
 	<key>api_url</key>
-	<string>http://localhost:8000</string>
+	<string>http://www.nobleandroyal.com:8000</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
