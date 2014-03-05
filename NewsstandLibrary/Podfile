@@ -1,0 +1,14 @@
+platform :ios, '6.0'
+pod 'ZulaLibrary', :path => "/Users/solomon/Projects/ZulaMobile/src/ios/ZulaLibrary/ZulaLibrary.podspec"
+pod 'RoboReader', :path => "/Users/solomon/Projects/OpenSource/RoboReader"
+pod 'LLACircularProgressView'
+pod 'AFNetworking', '~> 1.3.2'
+pod 'CocoaLumberjack'
+pod 'SVProgressHUD'
+pod 'MWPhotoBrowser', :git => 'https://github.com/yakubbaev/MWPhotoBrowser.git'
+pod 'SDSegmentedControl'
+pod 'MSPullToRefreshController'
+pod 'UIActivityIndicator-for-SDWebImage'
+pod 'SDWebImage-ProgressView'
+pod 'SWRevealViewController'
+pod 'SSToolkit'
