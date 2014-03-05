@@ -13,3 +13,5 @@
 
 // models
 #import "SMBookStore.h"
+
+#define zulaNewsstandLibraryVersion 0.2
