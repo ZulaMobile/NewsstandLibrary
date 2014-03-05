@@ -9,3 +9,8 @@
 * Advertisement on each page
 * Download indicator is changed
 * Bugs of download indicator is fixed
+
+0.4
+---
+
+* Converted into a cocoapods project
