@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>8FFC9D69-FA3A-4C0C-B41F-5D8E3A91010D</string>
+	<string>80A8EF31-DA5E-4918-A051-EA5993D89861</string>
 	<key>IDESourceControlProjectName</key>
 	<string>NewsstandLibrary</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -14,11 +14,11 @@
 		<string>solomon@melikoglu.info:zula_newsstand_library.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>NewsstandLibrary.xcodeproj/project.xcworkspace</string>
+	<string>NewsstandLibrary/NewsstandLibrary.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>671998DB-9B99-4729-81FF-1CD1D151DFCA</key>
-		<string>../..</string>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>solomon@melikoglu.info:zula_newsstand_library.git</string>

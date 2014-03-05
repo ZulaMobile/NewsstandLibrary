@@ -1,0 +1,652 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		67909CD718C76AC2005975DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67909CD618C76AC2005975DB /* Foundation.framework */; };
+		67909CD918C76AC2005975DB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67909CD818C76AC2005975DB /* CoreGraphics.framework */; };
+		67909CDB18C76AC2005975DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67909CDA18C76AC2005975DB /* UIKit.framework */; };
+		67909CE118C76AC2005975DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 67909CDF18C76AC2005975DB /* InfoPlist.strings */; };
+		67909CE318C76AC2005975DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67909CE218C76AC2005975DB /* main.m */; };
+		67909CE718C76AC2005975DB /* SMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67909CE618C76AC2005975DB /* SMAppDelegate.m */; };
+		67909CE918C76AC2005975DB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67909CE818C76AC2005975DB /* Images.xcassets */; };
+		67909CF018C76AC2005975DB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67909CEF18C76AC2005975DB /* XCTest.framework */; };
+		67909CF118C76AC2005975DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67909CD618C76AC2005975DB /* Foundation.framework */; };
+		67909CF218C76AC2005975DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67909CDA18C76AC2005975DB /* UIKit.framework */; };
+		67909CFA18C76AC2005975DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 67909CF818C76AC2005975DB /* InfoPlist.strings */; };
+		67909CFC18C76AC2005975DB /* NewsstandLibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 67909CFB18C76AC2005975DB /* NewsstandLibraryTests.m */; };
+		67909D2918C76FA7005975DB /* SMBookStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67909D0C18C76FA7005975DB /* SMBookStoreViewController.m */; };
+		67909D2A18C76FA7005975DB /* SMReaderAdvertisementModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 67909D0E18C76FA7005975DB /* SMReaderAdvertisementModule.m */; };
+		67909D2B18C76FA7005975DB /* SMBookStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 67909D1118C76FA7005975DB /* SMBookStore.m */; };
+		67909D2C18C76FA7005975DB /* SMBookStoreContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 67909D1318C76FA7005975DB /* SMBookStoreContainer.m */; };
+		67909D2D18C76FA7005975DB /* SMIssue.m in Sources */ = {isa = PBXBuildFile; fileRef = 67909D1518C76FA7005975DB /* SMIssue.m */; };
+		67909D2E18C76FA7005975DB /* GSProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 67909D1818C76FA7005975DB /* GSProgressView.m */; };
+		67909D2F18C76FA7005975DB /* SMBookShelfCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 67909D1A18C76FA7005975DB /* SMBookShelfCell.m */; };
+		67909D3018C76FA7005975DB /* SMBookShelfLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 67909D1C18C76FA7005975DB /* SMBookShelfLayout.m */; };
+		67909D3118C76FA7005975DB /* SMDownloadProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 67909D1E18C76FA7005975DB /* SMDownloadProgressView.m */; };
+		67909D3218C76FA7005975DB /* SMLogoDecorationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 67909D2018C76FA7005975DB /* SMLogoDecorationView.m */; };
+		67909D3318C76FA7005975DB /* SMPausedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 67909D2218C76FA7005975DB /* SMPausedView.m */; };
+		67909D3418C76FA7005975DB /* SMShelfDecoratorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 67909D2418C76FA7005975DB /* SMShelfDecoratorView.m */; };
+		67909D3518C76FA7005975DB /* SMShelfLayoutAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 67909D2618C76FA7005975DB /* SMShelfLayoutAttributes.m */; };
+		67909D3618C76FA7005975DB /* SMTableLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 67909D2818C76FA7005975DB /* SMTableLayout.m */; };
+		67909D3818C76FC8005975DB /* app.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67909D3718C76FC8005975DB /* app.plist */; };
+		D2878D5102DB45578001E819 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC754C15FD54DB6A17C7110 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		67909CF318C76AC2005975DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67909CCB18C76AC2005975DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67909CD218C76AC2005975DB;
+			remoteInfo = NewsstandLibrary;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		67909CD318C76AC2005975DB /* NewsstandLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsstandLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		67909CD618C76AC2005975DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		67909CD818C76AC2005975DB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		67909CDA18C76AC2005975DB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		67909CDE18C76AC2005975DB /* NewsstandLibrary-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NewsstandLibrary-Info.plist"; sourceTree = "<group>"; };
+		67909CE018C76AC2005975DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		67909CE218C76AC2005975DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		67909CE418C76AC2005975DB /* NewsstandLibrary-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NewsstandLibrary-Prefix.pch"; sourceTree = "<group>"; };
+		67909CE518C76AC2005975DB /* SMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMAppDelegate.h; sourceTree = "<group>"; };
+		67909CE618C76AC2005975DB /* SMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMAppDelegate.m; sourceTree = "<group>"; };
+		67909CE818C76AC2005975DB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		67909CEE18C76AC2005975DB /* NewsstandLibraryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsstandLibraryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		67909CEF18C76AC2005975DB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		67909CF718C76AC2005975DB /* NewsstandLibraryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NewsstandLibraryTests-Info.plist"; sourceTree = "<group>"; };
+		67909CF918C76AC2005975DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		67909CFB18C76AC2005975DB /* NewsstandLibraryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsstandLibraryTests.m; sourceTree = "<group>"; };
+		67909D0618C76FA7005975DB /* NewsstandLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsstandLibrary.h; sourceTree = "<group>"; };
+		67909D0B18C76FA7005975DB /* SMBookStoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMBookStoreViewController.h; sourceTree = "<group>"; };
+		67909D0C18C76FA7005975DB /* SMBookStoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMBookStoreViewController.m; sourceTree = "<group>"; };
+		67909D0D18C76FA7005975DB /* SMReaderAdvertisementModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMReaderAdvertisementModule.h; sourceTree = "<group>"; };
+		67909D0E18C76FA7005975DB /* SMReaderAdvertisementModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMReaderAdvertisementModule.m; sourceTree = "<group>"; };
+		67909D1018C76FA7005975DB /* SMBookStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMBookStore.h; sourceTree = "<group>"; };
+		67909D1118C76FA7005975DB /* SMBookStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMBookStore.m; sourceTree = "<group>"; };
+		67909D1218C76FA7005975DB /* SMBookStoreContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMBookStoreContainer.h; sourceTree = "<group>"; };
+		67909D1318C76FA7005975DB /* SMBookStoreContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMBookStoreContainer.m; sourceTree = "<group>"; };
+		67909D1418C76FA7005975DB /* SMIssue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMIssue.h; sourceTree = "<group>"; };
+		67909D1518C76FA7005975DB /* SMIssue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMIssue.m; sourceTree = "<group>"; };
+		67909D1718C76FA7005975DB /* GSProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSProgressView.h; sourceTree = "<group>"; };
+		67909D1818C76FA7005975DB /* GSProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSProgressView.m; sourceTree = "<group>"; };
+		67909D1918C76FA7005975DB /* SMBookShelfCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMBookShelfCell.h; sourceTree = "<group>"; };
+		67909D1A18C76FA7005975DB /* SMBookShelfCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMBookShelfCell.m; sourceTree = "<group>"; };
+		67909D1B18C76FA7005975DB /* SMBookShelfLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMBookShelfLayout.h; sourceTree = "<group>"; };
+		67909D1C18C76FA7005975DB /* SMBookShelfLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMBookShelfLayout.m; sourceTree = "<group>"; };
+		67909D1D18C76FA7005975DB /* SMDownloadProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMDownloadProgressView.h; sourceTree = "<group>"; };
+		67909D1E18C76FA7005975DB /* SMDownloadProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMDownloadProgressView.m; sourceTree = "<group>"; };
+		67909D1F18C76FA7005975DB /* SMLogoDecorationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLogoDecorationView.h; sourceTree = "<group>"; };
+		67909D2018C76FA7005975DB /* SMLogoDecorationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLogoDecorationView.m; sourceTree = "<group>"; };
+		67909D2118C76FA7005975DB /* SMPausedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMPausedView.h; sourceTree = "<group>"; };
+		67909D2218C76FA7005975DB /* SMPausedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMPausedView.m; sourceTree = "<group>"; };
+		67909D2318C76FA7005975DB /* SMShelfDecoratorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMShelfDecoratorView.h; sourceTree = "<group>"; };
+		67909D2418C76FA7005975DB /* SMShelfDecoratorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMShelfDecoratorView.m; sourceTree = "<group>"; };
+		67909D2518C76FA7005975DB /* SMShelfLayoutAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMShelfLayoutAttributes.h; sourceTree = "<group>"; };
+		67909D2618C76FA7005975DB /* SMShelfLayoutAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMShelfLayoutAttributes.m; sourceTree = "<group>"; };
+		67909D2718C76FA7005975DB /* SMTableLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTableLayout.h; sourceTree = "<group>"; };
+		67909D2818C76FA7005975DB /* SMTableLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTableLayout.m; sourceTree = "<group>"; };
+		67909D3718C76FC8005975DB /* app.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = app.plist; sourceTree = "<group>"; };
+		8D0A4A38FAA94226AEFECB3E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		9AC754C15FD54DB6A17C7110 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		67909CD018C76AC2005975DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67909CD918C76AC2005975DB /* CoreGraphics.framework in Frameworks */,
+				67909CDB18C76AC2005975DB /* UIKit.framework in Frameworks */,
+				67909CD718C76AC2005975DB /* Foundation.framework in Frameworks */,
+				D2878D5102DB45578001E819 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67909CEB18C76AC2005975DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67909CF018C76AC2005975DB /* XCTest.framework in Frameworks */,
+				67909CF218C76AC2005975DB /* UIKit.framework in Frameworks */,
+				67909CF118C76AC2005975DB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		67909CCA18C76AC2005975DB = {
+			isa = PBXGroup;
+			children = (
+				67909CDC18C76AC2005975DB /* NewsstandLibrary */,
+				67909CF518C76AC2005975DB /* NewsstandLibraryTests */,
+				67909CD518C76AC2005975DB /* Frameworks */,
+				67909CD418C76AC2005975DB /* Products */,
+				8D0A4A38FAA94226AEFECB3E /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		67909CD418C76AC2005975DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				67909CD318C76AC2005975DB /* NewsstandLibrary.app */,
+				67909CEE18C76AC2005975DB /* NewsstandLibraryTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		67909CD518C76AC2005975DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				67909CD618C76AC2005975DB /* Foundation.framework */,
+				67909CD818C76AC2005975DB /* CoreGraphics.framework */,
+				67909CDA18C76AC2005975DB /* UIKit.framework */,
+				67909CEF18C76AC2005975DB /* XCTest.framework */,
+				9AC754C15FD54DB6A17C7110 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		67909CDC18C76AC2005975DB /* NewsstandLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				67909D0518C76FA7005975DB /* Classes */,
+				67909CE518C76AC2005975DB /* SMAppDelegate.h */,
+				67909CE618C76AC2005975DB /* SMAppDelegate.m */,
+				67909CE818C76AC2005975DB /* Images.xcassets */,
+				67909CDD18C76AC2005975DB /* Supporting Files */,
+			);
+			path = NewsstandLibrary;
+			sourceTree = "<group>";
+		};
+		67909CDD18C76AC2005975DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				67909CDE18C76AC2005975DB /* NewsstandLibrary-Info.plist */,
+				67909CDF18C76AC2005975DB /* InfoPlist.strings */,
+				67909CE218C76AC2005975DB /* main.m */,
+				67909CE418C76AC2005975DB /* NewsstandLibrary-Prefix.pch */,
+				67909D3718C76FC8005975DB /* app.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		67909CF518C76AC2005975DB /* NewsstandLibraryTests */ = {
+			isa = PBXGroup;
+			children = (
+				67909CFB18C76AC2005975DB /* NewsstandLibraryTests.m */,
+				67909CF618C76AC2005975DB /* Supporting Files */,
+			);
+			path = NewsstandLibraryTests;
+			sourceTree = "<group>";
+		};
+		67909CF618C76AC2005975DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				67909CF718C76AC2005975DB /* NewsstandLibraryTests-Info.plist */,
+				67909CF818C76AC2005975DB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		67909D0518C76FA7005975DB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				67909D0618C76FA7005975DB /* NewsstandLibrary.h */,
+				67909D0718C76FA7005975DB /* UserInterface */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		67909D0718C76FA7005975DB /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				67909D0818C76FA7005975DB /* Components */,
+			);
+			path = UserInterface;
+			sourceTree = "<group>";
+		};
+		67909D0818C76FA7005975DB /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				67909D0918C76FA7005975DB /* BookStore */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		67909D0918C76FA7005975DB /* BookStore */ = {
+			isa = PBXGroup;
+			children = (
+				67909D0A18C76FA7005975DB /* Controller */,
+				67909D0F18C76FA7005975DB /* Model */,
+				67909D1618C76FA7005975DB /* View */,
+			);
+			path = BookStore;
+			sourceTree = "<group>";
+		};
+		67909D0A18C76FA7005975DB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				67909D0B18C76FA7005975DB /* SMBookStoreViewController.h */,
+				67909D0C18C76FA7005975DB /* SMBookStoreViewController.m */,
+				67909D0D18C76FA7005975DB /* SMReaderAdvertisementModule.h */,
+				67909D0E18C76FA7005975DB /* SMReaderAdvertisementModule.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		67909D0F18C76FA7005975DB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				67909D1018C76FA7005975DB /* SMBookStore.h */,
+				67909D1118C76FA7005975DB /* SMBookStore.m */,
+				67909D1218C76FA7005975DB /* SMBookStoreContainer.h */,
+				67909D1318C76FA7005975DB /* SMBookStoreContainer.m */,
+				67909D1418C76FA7005975DB /* SMIssue.h */,
+				67909D1518C76FA7005975DB /* SMIssue.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		67909D1618C76FA7005975DB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				67909D1718C76FA7005975DB /* GSProgressView.h */,
+				67909D1818C76FA7005975DB /* GSProgressView.m */,
+				67909D1918C76FA7005975DB /* SMBookShelfCell.h */,
+				67909D1A18C76FA7005975DB /* SMBookShelfCell.m */,
+				67909D1B18C76FA7005975DB /* SMBookShelfLayout.h */,
+				67909D1C18C76FA7005975DB /* SMBookShelfLayout.m */,
+				67909D1D18C76FA7005975DB /* SMDownloadProgressView.h */,
+				67909D1E18C76FA7005975DB /* SMDownloadProgressView.m */,
+				67909D1F18C76FA7005975DB /* SMLogoDecorationView.h */,
+				67909D2018C76FA7005975DB /* SMLogoDecorationView.m */,
+				67909D2118C76FA7005975DB /* SMPausedView.h */,
+				67909D2218C76FA7005975DB /* SMPausedView.m */,
+				67909D2318C76FA7005975DB /* SMShelfDecoratorView.h */,
+				67909D2418C76FA7005975DB /* SMShelfDecoratorView.m */,
+				67909D2518C76FA7005975DB /* SMShelfLayoutAttributes.h */,
+				67909D2618C76FA7005975DB /* SMShelfLayoutAttributes.m */,
+				67909D2718C76FA7005975DB /* SMTableLayout.h */,
+				67909D2818C76FA7005975DB /* SMTableLayout.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		67909CD218C76AC2005975DB /* NewsstandLibrary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67909CFF18C76AC2005975DB /* Build configuration list for PBXNativeTarget "NewsstandLibrary" */;
+			buildPhases = (
+				77615CBCC5AE43858015904F /* Check Pods Manifest.lock */,
+				67909CCF18C76AC2005975DB /* Sources */,
+				67909CD018C76AC2005975DB /* Frameworks */,
+				67909CD118C76AC2005975DB /* Resources */,
+				20C3858B905B495A81359D09 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NewsstandLibrary;
+			productName = NewsstandLibrary;
+			productReference = 67909CD318C76AC2005975DB /* NewsstandLibrary.app */;
+			productType = "com.apple.product-type.application";
+		};
+		67909CED18C76AC2005975DB /* NewsstandLibraryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67909D0218C76AC2005975DB /* Build configuration list for PBXNativeTarget "NewsstandLibraryTests" */;
+			buildPhases = (
+				67909CEA18C76AC2005975DB /* Sources */,
+				67909CEB18C76AC2005975DB /* Frameworks */,
+				67909CEC18C76AC2005975DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				67909CF418C76AC2005975DB /* PBXTargetDependency */,
+			);
+			name = NewsstandLibraryTests;
+			productName = NewsstandLibraryTests;
+			productReference = 67909CEE18C76AC2005975DB /* NewsstandLibraryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		67909CCB18C76AC2005975DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SM;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = ZulaMobile;
+				TargetAttributes = {
+					67909CED18C76AC2005975DB = {
+						TestTargetID = 67909CD218C76AC2005975DB;
+					};
+				};
+			};
+			buildConfigurationList = 67909CCE18C76AC2005975DB /* Build configuration list for PBXProject "NewsstandLibrary" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 67909CCA18C76AC2005975DB;
+			productRefGroup = 67909CD418C76AC2005975DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				67909CD218C76AC2005975DB /* NewsstandLibrary */,
+				67909CED18C76AC2005975DB /* NewsstandLibraryTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		67909CD118C76AC2005975DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67909CE118C76AC2005975DB /* InfoPlist.strings in Resources */,
+				67909D3818C76FC8005975DB /* app.plist in Resources */,
+				67909CE918C76AC2005975DB /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67909CEC18C76AC2005975DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67909CFA18C76AC2005975DB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		20C3858B905B495A81359D09 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77615CBCC5AE43858015904F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		67909CCF18C76AC2005975DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67909D3618C76FA7005975DB /* SMTableLayout.m in Sources */,
+				67909D2A18C76FA7005975DB /* SMReaderAdvertisementModule.m in Sources */,
+				67909D3518C76FA7005975DB /* SMShelfLayoutAttributes.m in Sources */,
+				67909D3218C76FA7005975DB /* SMLogoDecorationView.m in Sources */,
+				67909D3018C76FA7005975DB /* SMBookShelfLayout.m in Sources */,
+				67909D2D18C76FA7005975DB /* SMIssue.m in Sources */,
+				67909D2B18C76FA7005975DB /* SMBookStore.m in Sources */,
+				67909D3418C76FA7005975DB /* SMShelfDecoratorView.m in Sources */,
+				67909D2F18C76FA7005975DB /* SMBookShelfCell.m in Sources */,
+				67909CE718C76AC2005975DB /* SMAppDelegate.m in Sources */,
+				67909CE318C76AC2005975DB /* main.m in Sources */,
+				67909D2E18C76FA7005975DB /* GSProgressView.m in Sources */,
+				67909D3118C76FA7005975DB /* SMDownloadProgressView.m in Sources */,
+				67909D2C18C76FA7005975DB /* SMBookStoreContainer.m in Sources */,
+				67909D2918C76FA7005975DB /* SMBookStoreViewController.m in Sources */,
+				67909D3318C76FA7005975DB /* SMPausedView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67909CEA18C76AC2005975DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67909CFC18C76AC2005975DB /* NewsstandLibraryTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		67909CF418C76AC2005975DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67909CD218C76AC2005975DB /* NewsstandLibrary */;
+			targetProxy = 67909CF318C76AC2005975DB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		67909CDF18C76AC2005975DB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67909CE018C76AC2005975DB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		67909CF818C76AC2005975DB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67909CF918C76AC2005975DB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		67909CFD18C76AC2005975DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		67909CFE18C76AC2005975DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		67909D0018C76AC2005975DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D0A4A38FAA94226AEFECB3E /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NewsstandLibrary/NewsstandLibrary-Prefix.pch";
+				INFOPLIST_FILE = "NewsstandLibrary/NewsstandLibrary-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		67909D0118C76AC2005975DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D0A4A38FAA94226AEFECB3E /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NewsstandLibrary/NewsstandLibrary-Prefix.pch";
+				INFOPLIST_FILE = "NewsstandLibrary/NewsstandLibrary-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		67909D0318C76AC2005975DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NewsstandLibrary.app/NewsstandLibrary";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NewsstandLibrary/NewsstandLibrary-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "NewsstandLibraryTests/NewsstandLibraryTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		67909D0418C76AC2005975DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NewsstandLibrary.app/NewsstandLibrary";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NewsstandLibrary/NewsstandLibrary-Prefix.pch";
+				INFOPLIST_FILE = "NewsstandLibraryTests/NewsstandLibraryTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		67909CCE18C76AC2005975DB /* Build configuration list for PBXProject "NewsstandLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67909CFD18C76AC2005975DB /* Debug */,
+				67909CFE18C76AC2005975DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67909CFF18C76AC2005975DB /* Build configuration list for PBXNativeTarget "NewsstandLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67909D0018C76AC2005975DB /* Debug */,
+				67909D0118C76AC2005975DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67909D0218C76AC2005975DB /* Build configuration list for PBXNativeTarget "NewsstandLibraryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67909D0318C76AC2005975DB /* Debug */,
+				67909D0418C76AC2005975DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 67909CCB18C76AC2005975DB /* Project object */;
+}

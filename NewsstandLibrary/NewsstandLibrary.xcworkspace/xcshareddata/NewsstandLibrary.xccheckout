@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>DA1E0280-B407-4C69-AEE6-994E05ACD974</string>
+	<key>IDESourceControlProjectName</key>
+	<string>NewsstandLibrary</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>671998DB-9B99-4729-81FF-1CD1D151DFCA</key>
+		<string>solomon@melikoglu.info:zula_newsstand_library.git</string>
+		<key>7437E0C6-38DC-4F22-972B-FF6375FCD61E</key>
+		<string>solomon@46.19.36.179:appcreator_library.git</string>
+		<key>C9D015C7-5E21-413D-B32A-95438425348A</key>
+		<string>ssh://github.com/laplacesdemon/RoboReader</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>NewsstandLibrary/NewsstandLibrary.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>671998DB-9B99-4729-81FF-1CD1D151DFCA</key>
+		<string>../..</string>
+		<key>7437E0C6-38DC-4F22-972B-FF6375FCD61E</key>
+		<string>../../../ZulaLibrary</string>
+		<key>C9D015C7-5E21-413D-B32A-95438425348A</key>
+		<string>../../../../../../OpenSource/RoboReader</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>solomon@melikoglu.info:zula_newsstand_library.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>671998DB-9B99-4729-81FF-1CD1D151DFCA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>671998DB-9B99-4729-81FF-1CD1D151DFCA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>NewsstandLibrary</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C9D015C7-5E21-413D-B32A-95438425348A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>RoboReader</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7437E0C6-38DC-4F22-972B-FF6375FCD61E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ZulaLibrary</string>
+		</dict>
+	</array>
+</dict>
+</plist>
