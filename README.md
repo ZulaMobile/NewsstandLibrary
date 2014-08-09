@@ -20,3 +20,23 @@ Adverts
 -------
 
 This app type is designed to display full-screen adverts
+
+Creating a new Project Using Newsstand App Type
+===============================================
+
+ * Follow the steps in ZulaLibrary README.
+ * Add following to `Pods-NewsletterLibrary-prefix.pch` file:
+
+    #import "ZulaLibrary.h"
+    #import "DDLog.h"
+    
+        // notifications
+    #import "SMNotifications.h"
+    #define kNotificationIssueDownloadDidFinish @"kNotificationIssueDownloadDidFinish"
+    #define kNotificationIssueDownloadDidStart @"kNotificationIssueDownloadDidStart"
+    
+    #ifdef DEBUG
+    static const int ddLogLevel = LOG_LEVEL_VERBOSE;
+    #else
+    static const int ddLogLevel = LOG_LEVEL_WARN;
+    #endif
