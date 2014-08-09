@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <ZulaLibrary/SMPullToRefreshComponentViewController.h>
 
 
 @class SMBookStore;
@@ -16,7 +15,7 @@
  *  Book Store Component displays a list of issues.
  *  Each issue has a cover and when touched, it displays the contents (pdf or html)
  */
-@interface SMBookStoreViewController : SMPullToRefreshComponentViewController 
+@interface SMBookStoreViewController : SMBaseComponentViewController
 
 /**
  *  The model object for this component.
