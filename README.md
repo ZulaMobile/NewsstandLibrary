@@ -22,7 +22,7 @@ Adverts
 This app type is designed to display full-screen adverts
 
 Creating a new Project Using Newsstand App Type
------------------------------------------------
+===============================================
 
  * Follow the steps in ZulaLibrary README.
  * Add following to `Pods-NewsletterLibrary-prefix.pch` file:
